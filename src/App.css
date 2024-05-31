@@ -1,32 +1,32 @@
 body {
-  overflow: scroll;
+  overflow:auto;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .App {
   width: 100vw;
   height: 100vh;
-  position: relative;
-  background: #fff;
+  background-color:rgba(12, 10, 10, 0.662);
 }
 
 .video-preview {
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  width: 900px;
+  height: 600px;
+  top: 75px;
+  left: 300px;
   z-index: 100;
+  position: absolute;
   --webkit-transform-style: preserve-3d;
+  background-color: aqua;
 }
 
 .preview-canvas {
-  background-color: transparent;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  background-color: white;
+  width: 900px;
+  height: 600px;
+  top: 100px;
+  left: 325px;
+  /* position: absolute; */
   z-index: 1000;
 }
 

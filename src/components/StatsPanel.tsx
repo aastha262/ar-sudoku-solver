@@ -1,4 +1,5 @@
 import React from "react";
+import "./statspanel.css"
 
 export default function StatsPanel({
   imageCaptureTime,
@@ -20,31 +21,35 @@ export default function StatsPanel({
   solveTime: number;
 }) {
   return (
+    <html>
+    <div className="mainbox">
     <div className="stats-panel">
-      <div>
-        <b>image Capture Time:</b> {Math.round(imageCaptureTime)}
+      <div className="pad">
+        <b>Capture Time:</b> {Math.round(imageCaptureTime)}<br></br>
       </div>
-      <div>
-        <b>threshold Time:</b> {Math.round(thresholdTime)}
+      <div className="pad">
+        <b>Threshold Time:</b> {Math.round(thresholdTime)}<br></br>
       </div>
-      <div>
-        <b>connected Component Time:</b> {Math.round(connectedComponentTime)}
+      <div className="pad">
+        <b>Component Connection Time:</b> {Math.round(connectedComponentTime)}<br></br>
       </div>
-      <div>
-        <b>get CornerPoints Time:</b> {Math.round(getCornerPointsTime)}
+      <div className="pad">
+        <b>Corner Points Time:</b> {Math.round(getCornerPointsTime)}<br></br>
       </div>
-      <div>
-        <b>extract Image Time:</b> {Math.round(extractImageTime)}
+      <div className="pad">
+        <b>Image Extract Time:</b> {Math.round(extractImageTime)}<br></br>
       </div>
-      <div>
-        <b>extract Boxes Time:</b> {Math.round(extractBoxesTime)}
+      <div className="pad">
+        <b>Boxes Extract Time:</b> {Math.round(extractBoxesTime)}<br></br>
       </div>
-      <div>
-        <b>ocr Time:</b> {Math.round(ocrTime)}
+      <div className="pad">
+        <b>OCR Time:</b> {Math.round(ocrTime)}<br></br>
       </div>
-      <div>
-        <b>solve Time:</b> {Math.round(solveTime)}
+      <div className="pad">
+      <b>Solve Time:</b> {Math.round(solveTime)}
       </div>
     </div>
+    </div>
+    </html>
   );
 }
