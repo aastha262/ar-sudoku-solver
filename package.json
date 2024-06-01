@@ -1,6 +1,6 @@
 {
   "homepage": "https://virat2344.github.io/ar-sudoku-solver",
-  "name": "sudoku-grab",
+  "name": "AR-Sudoku-Solver",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
