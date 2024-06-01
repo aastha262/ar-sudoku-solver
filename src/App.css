@@ -1,4 +1,5 @@
 body {
+  position: absolute;
   overflow:auto;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -7,7 +8,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #151515;
-  position: fixed;
+  position: relative;
 }
 
 .video-preview {
@@ -18,17 +19,14 @@ body {
   z-index: 100;
   position: absolute;
   --webkit-transform-style: preserve-3d;
-  /* background-color: aqua; */
   border-radius: 20px;
 }
 
 .preview-canvas {
-  /* background-color: white; */
   width: 90%;
   height: 85%;
   margin-top: 1%;
   margin-left: 5%;
-  /* margin: 0 auto; */
   position: absolute;
   border-radius: 20px;
   box-shadow: 0px 0px 20px rgba(193, 193, 193, 0.5);
@@ -36,7 +34,6 @@ body {
 }
 
 .stats-panel {
-  /* background-color: rgba(100, 100, 100, 0.5); */
   position: absolute;
   bottom: 1%;
   z-index: 2000;
@@ -46,9 +43,3 @@ body {
   margin-left: 10px;
   margin-right: 10px;
 } */
-
-@media(max-width: 400px){
-  .stats-panel{
-    bottom: 15%;
-  }
-}
