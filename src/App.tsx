@@ -132,8 +132,8 @@ function App() {
       <video
         ref={videoRef}
         className="video-preview"
-        width={10}
-        height={10}
+        width={50}
+        height={50}
         playsInline
         muted
       />
