@@ -46,3 +46,9 @@ body {
   margin-left: 10px;
   margin-right: 10px;
 } */
+
+@media(min-height: 800px){
+  .stats-panel{
+    bottom: 15%;
+  }
+}
