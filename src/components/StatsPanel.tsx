@@ -31,7 +31,7 @@ export default function StatsPanel({
         <b>Threshold Time:</b> {Math.round(thresholdTime)}<br></br>
       </div>
       <div className="pad">
-        <b>Component Connection Time:</b> {Math.round(connectedComponentTime)}<br></br>
+        <b>Component Conn Time:</b> {Math.round(connectedComponentTime)}<br></br>
       </div>
       <div className="pad">
         <b>Corner Points Time:</b> {Math.round(getCornerPointsTime)}<br></br>
