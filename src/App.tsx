@@ -58,8 +58,8 @@ function App() {
               bottomLeft,
               bottomRight,
             } = processor.corners;
-            context.strokeStyle = "rgba(0,200,0,0.5)";
-            context.fillStyle = "rgba(0,0,0,0.3)";
+            context.strokeStyle = "rgba(0,200,0,0.0)";
+            context.fillStyle = "rgba(0,0,0,0.0)";
             context.lineWidth = 3;
             context.beginPath();
             context.moveTo(topLeft.x, topLeft.y);
@@ -71,7 +71,7 @@ function App() {
             context.fill();
           }
           if (processor.gridLines) {
-            context.strokeStyle = "rgba(0,200,0,0.5)";
+            context.strokeStyle = "rgba(0,200,0,0.0)";
             context.lineWidth = 2;
             processor.gridLines.forEach((line) => {
               context.moveTo(line.p1.x, line.p1.y);
