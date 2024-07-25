@@ -11,8 +11,7 @@ export interface Transform {
   g: number;
   h: number;
 }
-// see here for details http://alumni.media.mit.edu/~cwren/interpolator/
-// now available here https://web.archive.org/web/20071214081425/http://alumni.media.mit.edu/~cwren/interpolator/
+
 export default function findHomographicTransform(
   size: number,
   corners: {

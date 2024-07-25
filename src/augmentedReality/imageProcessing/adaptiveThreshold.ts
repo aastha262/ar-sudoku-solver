@@ -1,5 +1,4 @@
 import Image from "./Image";
-// import gaussianBlur from "./gaussianBlur";
 import boxBlur from "./boxBlur";
 
 /**
