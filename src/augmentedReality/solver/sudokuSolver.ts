@@ -71,9 +71,6 @@ export default class SudokuSolver {
   // Setup the circular lists for the X algorithm to work on
   public constructor() {
     // construct the rows and columns
-    // https://en.wikipedia.org/wiki/Exact_cover#Sudoku and https://www.stolaf.edu//people/hansonr/sudoku/exactcovermatrix.htm
-    // https://www.kth.se/social/files/58861771f276547fe1dbf8d1/HLaestanderMHarrysson_dkand14.pdf
-
     // create a doubly linked list of column headers
     this.columnRoot = new Column();
     for (let col = 0; col < 81 * 4; col++) {

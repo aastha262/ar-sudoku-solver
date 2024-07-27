@@ -19,7 +19,6 @@ export default function captureImage(video: HTMLVideoElement) {
       //const r = imageData.data[(y * width + x) * 4];
       const g = imageData.data[(row + x) * 4 + 1];
       // const b = imageData.data[(y * width + x) * 4 + 2];
-      // https://en.wikipedia.org/wiki/Grayscale#Converting_color_to_grayscale
       // const grey = 0.299 * r + 0.587 * g + 0.114 * b;
       bytes[row + x] = g;
     }

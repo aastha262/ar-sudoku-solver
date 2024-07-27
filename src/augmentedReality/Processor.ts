@@ -323,7 +323,7 @@ export default class Processor extends (EventEmitter as {
             this.neuralNetTime =
               0.1 * (performance.now() - startTime) + this.neuralNetTime * 0.9;
 
-            // solve the suoku puzzle using the dancing links and algorithm X - https://en.wikipedia.org/wiki/Knuth%27s_Algorithm_X
+            // solve the suoku puzzle using the dancing links and algorithm X
             startTime = performance.now();
             const solver = new SudokuSolver();
             // set the known values
