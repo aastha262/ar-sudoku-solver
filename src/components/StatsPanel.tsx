@@ -21,35 +21,41 @@ export default function StatsPanel({
   solveTime: number;
 }) {
   return (
-    <html>
     <div className="mainbox">
-    <div className="stats-panel">
-      <div className="pad">
-        <b>Capture Time:</b> {Math.round(imageCaptureTime)}<br></br>
-      </div>
-      <div className="pad">
-        <b>Threshold Time:</b> {Math.round(thresholdTime)}<br></br>
-      </div>
-      <div className="pad">
-        <b>Component Conn Time:</b> {Math.round(connectedComponentTime)}<br></br>
-      </div>
-      <div className="pad">
-        <b>Corner Points Time:</b> {Math.round(getCornerPointsTime)}<br></br>
-      </div>
-      <div className="pad">
-        <b>Image Extract Time:</b> {Math.round(extractImageTime)}<br></br>
-      </div>
-      <div className="pad">
-        <b>Boxes Extract Time:</b> {Math.round(extractBoxesTime)}<br></br>
-      </div>
-      <div className="pad">
-        <b>OCR Time:</b> {Math.round(ocrTime)}<br></br>
-      </div>
-      <div className="pad">
-      <b>Solve Time:</b> {Math.round(solveTime)}
+      <div className="stats-panel">
+        <div className="pad">
+          <b>Capture Time</b>
+          <span>{Math.round(imageCaptureTime)} ms</span>
+        </div>
+        <div className="pad">
+          <b>Threshold Time</b>
+          <span>{Math.round(thresholdTime)} ms</span>
+        </div>
+        <div className="pad">
+          <b>Component Conn Time</b>
+          <span>{Math.round(connectedComponentTime)} ms</span>
+        </div>
+        <div className="pad">
+          <b>Corner Points Time</b>
+          <span>{Math.round(getCornerPointsTime)} ms</span>
+        </div>
+        <div className="pad">
+          <b>Image Extract Time</b>
+          <span>{Math.round(extractImageTime)} ms</span>
+        </div>
+        <div className="pad">
+          <b>Boxes Extract Time</b>
+          <span>{Math.round(extractBoxesTime)} ms</span>
+        </div>
+        <div className="pad">
+          <b>OCR Time</b>
+          <span>{Math.round(ocrTime)} ms</span>
+        </div>
+        <div className="pad">
+          <b>Solve Time</b>
+          <span>{Math.round(solveTime)} ms</span>
+        </div>
       </div>
     </div>
-    </div>
-    </html>
   );
 }

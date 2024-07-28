@@ -56,54 +56,15 @@ function App() {
   }, []);
 
   const drawCorners = (context: CanvasRenderingContext2D) => {
-    if (processor.corners) {
-      const { topLeft, topRight, bottomLeft, bottomRight } = processor.corners;
-      context.strokeStyle = "rgba(0,200,0,0.5)";
-      context.fillStyle = "rgba(0,0,0,0.1)";
-      context.lineWidth = 3;
-      context.beginPath();
-      context.moveTo(topLeft.x, topLeft.y);
-      context.lineTo(topRight.x, topRight.y);
-      context.lineTo(bottomRight.x, bottomRight.y);
-      context.lineTo(bottomLeft.x, bottomLeft.y);
-      context.closePath();
-      context.stroke();
-      context.fill();
-    }
+    // ... (keep the existing drawCorners function)
   };
 
   const drawGridLines = (context: CanvasRenderingContext2D) => {
-    if (processor.gridLines) {
-      context.strokeStyle = "rgba(0,200,0,0.5)";
-      context.lineWidth = 2;
-      processor.gridLines.forEach((line) => {
-        context.beginPath();
-        context.moveTo(line.p1.x, line.p1.y);
-        context.lineTo(line.p2.x, line.p2.y);
-        context.stroke();
-      });
-    }
+    // ... (keep the existing drawGridLines function)
   };
 
   const drawSolvedPuzzle = (context: CanvasRenderingContext2D) => {
-    if (processor.solvedPuzzle) {
-      context.fillStyle = "rgba(0,200,0,1)";
-      for (let y = 0; y < 9; y++) {
-        for (let x = 0; x < 9; x++) {
-          if (processor.solvedPuzzle[y][x]) {
-            const { digit, digitHeight, digitRotation, position, isKnown } = processor.solvedPuzzle[y][x];
-            if (!isKnown) {
-              context.font = `bold ${digitHeight}px sans-serif`;
-              context.save();
-              context.translate(position.x, position.y);
-              context.rotate(Math.PI - digitRotation);
-              context.fillText(digit.toString(), -digitHeight / 4, digitHeight / 3);
-              context.restore();
-            }
-          }
-        }
-      }
-    }
+    // ... (keep the existing drawSolvedPuzzle function)
   };
 
   useEffect(() => {
@@ -123,29 +84,34 @@ function App() {
 
   return (
     <div className="App">
-   <h1 className="title">
-  <span className="title-word">AR</span>
-  <span className="title-word">Sudoku</span>
-  <span className="title-word">Solver</span>
-</h1>
+      <h1 className="title">
+        <span className="title-word">AR</span>
+        <span className="title-word">Sudoku</span>
+        <span className="title-word">Solver</span>
+      </h1>
       <div className="content-wrapper">
-        <video
-          ref={videoRef}
-          className="video-preview"
-          width={50}
-          height={50}
-          playsInline
-          muted
-        />
-        <canvas
-          ref={previewCanvasRef}
-          className="preview-canvas"
-          width={videoSize.width}
-          height={videoSize.height}
-        />
+        <div className="video-container">
+          <video
+            ref={videoRef}
+            className="video-preview"
+            width={50}
+            height={50}
+            playsInline
+            muted
+          />
+          <canvas
+            ref={previewCanvasRef}
+            className="preview-canvas"
+            width={videoSize.width}
+            height={videoSize.height}
+          />
+        </div>
+        <div className="stats-container">
+          <StatsPanel {...stats} />
+        </div>
       </div>
-      <StatsPanel {...stats} />
     </div>
   );
 }
+
 export default App;

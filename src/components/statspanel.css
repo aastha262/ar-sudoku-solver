@@ -1,34 +1,79 @@
-.mainbox{
-    display: flex;
-    justify-content: center;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
-.stats-panel {
-    /* font-family: 'Aileron', sans-serif; */
-    /* font-family: 'Montserrat', sans-serif; */
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    color: #151515;
-    width: 55%;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    padding: 15px;
-    text-align: center;
-    border-radius: 18px;
-    background-color: rgba(254, 255, 230, 1);
-    backdrop-filter: blur(1.5px) brightness(1);
-    border: 0px solid #000;
-    box-shadow: 0px 0px 20px rgba(193, 193, 193, 0.5);
-  }
 
-  @media(max-width: 600px){
-    .stats-panel{
-        width: 90%;
-        font-size: 10px;
-    }
+.mainbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f4f8;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.stats-panel {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #2c3e50;
+  width: 300px;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pad {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px 10px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+}
+
+.pad:hover {
+  background-color: #e9ecef;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pad b {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9em;
+  color: #495057;
+}
+
+.pad span {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #343a40;
+}
+
+@media (max-width: 768px) {
+  .stats-panel {
+      font-size: 12px;
+      padding: 15px;
   }
-  
-  .pad{
-    margin-top: 5px;
-    letter-spacing: 1px;
+  .pad {
+      min-height: 70px;
   }
+}
+
+@media (max-width: 480px) {
+  .stats-panel {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
